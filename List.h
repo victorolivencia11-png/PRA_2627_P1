@@ -21,8 +21,8 @@ public:
     virtual bool empty() = 0;
 
     virtual int size() = 0;
-	
+
+    virtual T operator[](int pos) = 0;
 };
 
 #endif
-
