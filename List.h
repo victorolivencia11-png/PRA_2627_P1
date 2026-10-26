@@ -1,28 +1,27 @@
 #ifndef LIST_H
 #define LIST_H
 
-template <typename T> 
+template <typename T>
 class List {
-    public:
-		void insert(int pos, T e);
-		
-		void append(T e);
+public:
+    virtual ~List() = default;
 
-		void prepend(T e);
+    virtual void insert(int pos, T e) = 0;
 
-		T remove(int pos);
+    virtual void append(T e) = 0;
 
-		T get(int pos);
+    virtual void prepend(T e) = 0;
 
-		int search(T e);
+    virtual T remove(int pos) = 0;
 
-		bool empty();
+    virtual T get(int pos) = 0;
 
-		int size();
+    virtual int search(T e) = 0;
 
-		~List();
+    virtual bool empty() = 0;
 
-		// ... aquí los métodos virtuales puros
+    virtual int size() = 0;
+	
 };
 
 #endif
